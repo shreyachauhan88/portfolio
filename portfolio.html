@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="icon" type="image/jpeg" href="images/profile.jpeg">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-4 fixed w-full z-10">
+        <div class="container mx-auto max-w-6xl flex justify-between items-center">
+            <h1 class="text-xl font-bold">My Portfolio</h1>
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+            <ul id="menu" class="hidden md:flex space-x-4">
+                <li><a href="#home" class="text-gray-700 hover:text-blue-500">Home</a></li>
+                <li><a href="#about" class="text-gray-700 hover:text-blue-500">About</a></li>
+                <li><a href="#projects" class="text-gray-700 hover:text-blue-500">Projects</a></li>
+                <li><a href="#contact" class="text-gray-700 hover:text-blue-500">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Banner -->
+    <section id="home" class="h-screen flex flex-col justify-center items-center text-center p-6 bg-cover bg-center"
+        style="background-image: url('images/banner.jpg');">
+        <div class="bg-black bg-opacity-50 p-8 rounded-lg">
+            <h2 class="text-4xl font-bold text-white">Hello, I'm Shreya Chauhan</h2>
+            <p class="text-gray-200 mt-2">Web Developer | Designer | Creator</p>
+        </div>
+        <div class="snowflake-area">
+            <canvas id="snowball" width="200" height="200"></canvas>
+        </div>
+        <div class="absolute bottom-10 right-10 text-white text-xl">
+            Scroll Down
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto max-w-6xl py-16 px-6 flex flex-col md:flex-row items-center">
+        <img src="images/shreya picture.jpg" alt="Shreya Chauhan - Web Developer" class="w-60 h-80 shadow-md md:mr-10"
+            loading="lazy">
+        <div class="text-left max-w-2xl">
+            <h2 class="text-3xl font-bold mb-4">About Me</h2>
+            <p class="text-gray-600 mb-4">
+                <strong>💻 Who am I?</strong><br>
+                I am a <strong>passionate web developer</strong> with a strong foundation in <strong>HTML, CSS,
+                    JavaScript,
+                    and Tailwind CSS</strong>. I specialize in building <strong>modern, responsive, and
+                    interactive</strong>
+                websites that provide seamless user experiences.
+            </p>
+            <p class="text-gray-600 mb-4">
+                <strong>🚀 What I Do?</strong><br>
+                - Craft visually appealing <strong>UI/UX designs</strong> with clean and efficient code.<br>
+                - Develop <strong>high-performance websites</strong> optimized for speed, accessibility, and SEO.<br>
+                - Utilize <strong>Tailwind CSS</strong> to create elegant and reusable UI components.<br>
+                - Build <strong>interactive web applications</strong> using <strong>JavaScript</strong> for dynamic
+                functionality.<br>
+                - Ensure <strong>cross-browser compatibility</strong> and <strong>mobile-first designs</strong>.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container mx-auto max-w-6xl py-16 px-6 text-center">
+        <h2 class="text-3xl font-bold">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            <div
+                class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src="images/project-2.png" alt="Project 1 - Nix E-commerce Website" class="w-full" loading="lazy">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold">Project 1</h3>
+                    <p class="text-gray-600">Nix is a fully functional shoe-based e-commerce website developed using
+                        React.js...</p>
+                    <button onclick="window.location.href='project-details.html?id=1'"
+                        class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                        aria-label="View more details about Project 1">View More</button>
+                </div>
+            </div>
+            <div
+                class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src="images/project-1.png" alt="Project 2 - Ahura Brand Website" class="w-full" loading="lazy">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold">Project 2</h3>
+                    <p class="text-gray-600">Ahura is a sleek and responsive brand introductory website built using HTML
+                        and CSS...</p>
+                    <button onclick="window.location.href='project-details-2.html?id=2'"
+                        class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                        aria-label="View more details about Project 2">View More</button>
+                </div>
+            </div>
+            <div
+                class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src="images/project-3.png" alt="Project 3 - Content Management System" class="w-full"
+                    loading="lazy">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold">Project 3</h3>
+                    <p class="text-gray-600">A feature-rich content management system built using Node.js and MongoDB...
+                    </p>
+                    <button onclick="window.location.href='project-details-3.html?id=3'"
+                        class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                        aria-label="View more details about Project 3">View More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    
+    <section class="py-12 bg-white text-gray-900">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+          
+          <!-- Section Heading -->
+          <h2 class="text-4xl font-bold">Education, Achievements & Workshops</h2>
+          <p class="text-gray-500 italic mt-2">A Glimpse of My Academic and Professional Journey</p>
+      
+          <!-- Grid Container -->
+          <div class="grid md:grid-cols-3 gap-6 mt-8">
+            
+            <!-- Education Card -->
+            <div class="bg-gray-100 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+              <h3 class="text-2xl font-semibold flex items-center justify-center gap-2">
+                🎓 Education
+              </h3>
+              <ul class="mt-4 text-gray-700 text-lg space-y-2">
+                <li class="flex items-center gap-2">
+                  ✅ Completed Diploma in IT from Silveroak University
+                </li>
+                <li class="flex items-center gap-2">
+                  ✅ Currently pursuing B-Tech in IT from Silveroak University
+                </li>
+              </ul>
+            </div>
+      
+            <!-- Achievements Card -->
+            <div class="bg-gray-100 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+              <h3 class="text-2xl font-semibold flex items-center justify-center gap-2">
+                🏆 Achievements
+              </h3>
+              <ul class="mt-4 text-gray-700 text-lg space-y-2">
+                <li class="flex items-center gap-2">
+                  🥇 Awarded a Gold Medal for Diploma
+                </li>
+                <li class="flex items-center gap-2">
+                  🏅 Awarded a Gold Medal for Excellence in IT Branch
+                </li>
+              </ul>
+            </div>
+      
+            <!-- Workshop Card -->
+            <div class="bg-gray-100 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+              <h3 class="text-2xl font-semibold flex items-center justify-center gap-2">
+                📚 Workshops
+              </h3>
+              <ul class="mt-4 text-gray-700 text-lg space-y-2">
+                <li class="flex items-center gap-2">
+                  ✅ Attended React.js Workshop
+                </li>
+                <li class="flex items-center gap-2">
+                  ✅ Attended IEEE Cloud Session
+                </li>
+              </ul>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-6 mt-10">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold">Quick Links</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 mt-4">
+                <a href="mailto:2302031030008@silveroakuni.ac.in" class="text-gray-300 hover:text-white">College
+                    Email</a>
+                <a href="mailto:shreyachauhan509@gmail.com" class="text-gray-300 hover:text-white">Personal Email</a>
+                <a href="https://www.linkedin.com/in/shreya-chauhan-a44b28215/" target="_blank"
+                    class="text-gray-300 hover:text-white">LinkedIn</a>
+                <a href="https://github.com/shreyachauhan88/" target="_blank"
+                    class="text-gray-300 hover:text-white">GitHub</a>
+            </div>
+            <p class="mt-6">&copy; 2025 Shreya Chauhan. All rights reserved.</p>
+        </div>
+
+
+
+
+
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>

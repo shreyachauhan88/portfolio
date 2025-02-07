@@ -1,0 +1,7 @@
+.container.mx-auto.flex.justify-between.items-center{
+    max-width: 1200px;
+}
+img.w-16.mx-auto.mt-4{
+    width: 6rem;;
+}
+
